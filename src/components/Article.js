@@ -5,11 +5,11 @@ function Article({title, date ="January 1, 1970", preview, minutes}) {
 
     if(minutes < 30){
         emoji = '☕️';
-        roundedMinutes = Math.round(minutes /5)
+        roundedMinutes = Math.ceil(minutes /5)
     }
     else {
         emoji = '🍱'
-        roundedMinutes = Math.round(minutes /10)
+        roundedMinutes = Math.ceil(minutes /10)
     }
 
     const timeToRead = emoji.repeat(roundedMinutes);
